@@ -13,6 +13,12 @@ def build_bond_list(
         min_bond : float=0
     ) -> dict[tuple[int, int], float]:
     """Find the bonds in a molecule (set of coordinates) based on distance criteria."""
+    if min_bond < 0.0:
+        raise ValueError("Can't have negative length minimum bond length")
+
+    if max_bond < 0.0:
+        raise ValueError("Can't have negative length maximum bond length")
+
     bonds = {}
     num_atoms = len(coordinates)
 
