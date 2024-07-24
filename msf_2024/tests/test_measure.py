@@ -1,4 +1,3 @@
-
 import numpy as np
 from msf_2024 import measure
 
@@ -12,4 +11,4 @@ def test_calculate_angle() -> None:
     assert angle_deg == 90.0
 
     angle_rad = measure.calculate_angle(rA, rB, rC, degrees=False)
-    assert angle_rad == (np.pi/2)
+    assert angle_rad == (np.pi / 2)

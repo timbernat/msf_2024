@@ -8,10 +8,10 @@ import numpy as np
 
 
 def build_bond_list(
-        coordinates : Sequence[np.ndarray[Any, float]],
-        max_bond : float=1.5,
-        min_bond : float=0
-    ) -> dict[tuple[int, int], float]:
+    coordinates: Sequence[np.ndarray[Any, float]],
+    max_bond: float = 1.5,
+    min_bond: float = 0,
+) -> dict[tuple[int, int], float]:
     """Find the bonds in a molecule (set of coordinates) based on distance criteria."""
     if min_bond < 0.0:
         raise ValueError("Can't have negative length minimum bond length")
